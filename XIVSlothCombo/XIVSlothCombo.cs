@@ -163,7 +163,7 @@ namespace XIVSlothCombo
             try
             {
                 string basicMessage = $"Welcome to XIVSlothCombo v{this.GetType().Assembly.GetName().Version}!";
-                using HttpResponseMessage? motd = httpClient.GetAsync("https://raw.githubusercontent.com/Nik-Potokar/XIVSlothCombo/main/res/motd.txt").Result;
+                using HttpResponseMessage? motd = httpClient.GetAsync("https://raw.githubusercontent.com/FunkyJumbo/XIVSlothCombo/main/res/motd.txt").Result;
                 motd.EnsureSuccessStatusCode();
                 string? data = motd.Content.ReadAsStringAsync().Result;
                 List<Payload>? payloads =
