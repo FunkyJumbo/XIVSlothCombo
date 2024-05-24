@@ -11,6 +11,7 @@ namespace XIVSlothCombo.Combos.PvE
         public const byte JobID = 36;
 
         public const uint
+            ConvictionMarcato = 34574,
             RoseOfDestruction = 23275,
             ShockStrike = 11429,
             FeatherRain = 11426,
@@ -273,7 +274,7 @@ namespace XIVSlothCombo.Combos.PvE
 
             protected override uint Invoke(uint actionID, uint lastComboMove, float comboTime, byte level)
             {
-                if (actionID is FeatherRain or Eruption)
+                if (actionID is ConvictionMarcato or Eruption)
                 {
                     if (HasEffect(Buffs.PhantomFlurry))
                         return OriginalHook(PhantomFlurry);
